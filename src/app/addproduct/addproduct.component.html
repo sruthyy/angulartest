@@ -1,0 +1,46 @@
+<div class="container">  
+    <h1>ADD PRODUCT</h1>  
+    <form [formGroup]="profileForm" (submit)="onSubmit()">  
+      <div class="form-group">  
+        <label for="name" > Product Name</label>  
+       
+        <input type="text" formControlName="pname" id=pname required > 
+      
+      </div>  
+      <div class="form-group">  
+        <label for="name"> Description</label>  
+       
+        <input type="text" formControlName="pdescription" id=desc >
+      </div> 
+      <div class="form-group">  
+        <label for="name"> quantity</label>  
+       
+        <input type="number" formControlName="pquantity" id=quant >
+      </div> 
+      
+      <div class="content">
+        <h4>datepicker should display current date:</h4>
+        <div class="row">
+          <div class="col-xs-12 col-12 col-md-4 form-group">
+            <input type="text"
+                  class="form-control"
+                  [minDate]="minDate"
+                  [maxDate]="maxDate"
+                  #dp="bsDatepicker"
+                  bsDatepicker [(bsValue)]="myDateValue">
+          </div>
+        </div>
+      </div>
+     
+      <div class="form-group">
+        <label for="name"> Image</label>  
+        <input type="file" name="image" formControlName="pimage" id=image  />
+    </div>
+     
+     <div>
+      <button type="submit" [disabled]="!profileForm.valid">Submit</button>  
+     </div>
+      
+    </form>  
+  </div>
+  

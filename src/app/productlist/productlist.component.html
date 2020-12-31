@@ -1,0 +1,21 @@
+
+<table border="3" align="center">
+    <tr>
+      <td>PRODUCT</td>
+      <td>DESCRIPTION</td>
+      <td>quantity</td>
+      <td>image</td>
+      </tr>
+      <tr *ngFor="let obj of val">
+        <td><a routerLink = "/abdetails">{{obj.pname}}</a></td>
+        <td>{{obj.pdescription}}</td>
+        <td>{{obj.pquantity}}</td>
+        <td>{{obj.pimage}}</td>
+      </tr>
+    </table>
+
+    <button (click)="popup()">add new product</button>
+
+   
+  
+
